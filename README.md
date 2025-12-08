@@ -5,10 +5,10 @@
 [![UVM](https://img.shields.io/badge/Methodology-UVM-blue.svg)](https://www.accellera.org/downloads/standards/uvm)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2011%20%7C%20MSYS2-blue.svg)](https://www.msys2.org/)
 
-## 📋 Overview
+## Overview
 A professional-grade verification environment for the PicoRV32 RISC-V processor core implementing modern verification methodologies. This project integrates Google's RISCV-DV random instruction generator with Xilinx Vivado simulation tools to create a robust, automated verification flow for RISC-V processor validation.
 
-## ✨ Key Features
+## Key Features
 - **UVM-Based Testbench**: Structured verification environment with scoreboard and coverage collection
 - **RISCV-DV Integration**: Constrained random instruction generation for comprehensive testing
 - **RV32IM Coverage**: 97.3% instruction coverage across arithmetic, logical, memory, and control operations
@@ -16,7 +16,7 @@ A professional-grade verification environment for the PicoRV32 RISC-V processor 
 - **Automated Flow**: Complete Makefile-driven verification pipeline
 - **Professional Methodology**: Coverage-driven verification with constrained random testing
 
-## 🏗️ Architecture
+## Architecture
 ```
 ┌─────────────────────────────────────────────────────┐
 │                   RISCV-DV Framework                │
@@ -37,7 +37,7 @@ A professional-grade verification environment for the PicoRV32 RISC-V processor 
 └─────────────────────────────────────────────────────┘
 ```
 
-## 📊 Verification Results
+## Verification Results
 | Metric | Value | Status |
 |--------|-------|--------|
 | **Instruction Coverage** | 97.3% | ✅ **Achieved** |
@@ -46,7 +46,7 @@ A professional-grade verification environment for the PicoRV32 RISC-V processor 
 | **Simulation Speed** | 12.5k cycles/sec | ✅ **Optimized** |
 | **Cross-Platform** | Windows 11 + MSYS2 | ✅ **Implemented** |
 
-## 🛠️ Technical Stack
+## Technical Stack
 - **Processor**: PicoRV32 (RV32IM ISA)
 - **Verification**: UVM 1.2, RISCV-DV
 - **Simulation**: Xilinx Vivado XSim 2023.2
@@ -55,7 +55,7 @@ A professional-grade verification environment for the PicoRV32 RISC-V processor 
 - **Scripting**: Python 3.12, TCL, Makefile
 - **Configuration**: YAML-based hierarchical configs
 
-## 📁 Project Structure
+## Project Structure
 ```
 riscv_dv_picorv32/
 ├── combined_test_output/          # Complete test results
@@ -71,7 +71,7 @@ riscv_dv_picorv32/
 └── Makefile                     # Automation workflow
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Windows 11 with MSYS2 MinGW64
@@ -113,7 +113,7 @@ make coverage_report
 make clean
 ```
 
-## 📈 Coverage Analysis
+## Coverage Analysis
 The project implements comprehensive functional coverage:
 - **Instruction Types**: Arithmetic, Logical, Memory, Control Flow
 - **Operand Combinations**: Edge cases, boundary values, random patterns
@@ -121,45 +121,45 @@ The project implements comprehensive functional coverage:
 - **Exception Handling**: Illegal instructions, memory faults
 - **Memory Operations**: Various addressing modes and alignments
 
-## 🔍 Key Testbench Components
+## Key Testbench Components
 1. **UVM Test Controller**: Manages test sequences and simulation phases
 2. **Intelligent Scoreboard**: Compares actual vs. expected execution results
 3. **Coverage Collector**: Tracks instruction and scenario coverage
 4. **Memory Model**: Implements unified 64KB address space with configurable latency
 5. **Clock/Reset Manager**: Generates stable 50MHz clock with controlled reset sequences
 
-## 🐛 Bug Discovery
+## Bug Discovery
 During verification, several critical issues were identified and resolved:
 1. **Multiplication Overflow**: Incorrect flag setting in MULH instructions
 2. **Branch Timing**: Fixed branch target calculation delays
 3. **Memory Alignment**: Corrected misaligned access handling
 4. **Reset Synchronization**: Improved reset de-assertion timing
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 - **Technical Skills**: UVM testbench design, constrained random verification, coverage analysis
 - **Tool Proficiency**: Vivado simulation, RISCV-DV, GNU toolchain integration
 - **Methodology**: Coverage-driven verification, regression testing, bug tracking
 - **Cross-Platform**: Windows/Linux toolchain management, environment setup
 
-## 📚 Documentation
+## Documentation
 - [Project Report](docs/project_report.pdf) - Comprehensive project documentation
 - [Verification Plan](docs/verification_plan.md) - Detailed verification strategy
 - [Setup Guide](docs/setup_guide.md) - Step-by-step environment configuration
 - [API Reference](docs/api_reference.md) - Testbench component documentation
 
-## 🤝 Contributing
+## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 - **PicoRV32 Developers**: For the open-source RISC-V core implementation
 - **Google RISCV-DV Team**: For the excellent random instruction generator
 - **Xilinx**: For the Vivado Design Suite and simulation tools
 - **RISC-V International**: For the open standard instruction set architecture
 
-## 📧 Contact
+## Contact
 For questions or feedback:
 - **Project Maintainer**: Priyanshu Sil
 - **LinkedIN Link**: https://www.linkedin.com/in/priyanshu-sil-b0a7551b0/ 

@@ -1,0 +1,36 @@
+==============================================
+PICORV32 ARITHMETIC TEST - SUMMARY REPORT
+==============================================
+Test Date: Sun Dec  7 22:51:21 IST 2025
+Test Version: Final Arithmetic Test
+Simulator: Vivado 2024.2
+==============================================
+
+TEST OVERVIEW:
+-------------
+- Test Name: Basic Arithmetic Operations Test
+- CPU: PicoRV32 RISC-V Processor
+- Features Tested: 
+  * Integer Arithmetic (ADD, SUB, MUL, DIV)
+  * Logical Operations (AND, OR, XOR)
+  * Shift Operations (SLL, SRA, SRL)
+  * Memory Operations (Load/Store)
+
+EXECUTION RESULTS:
+-----------------
+
+
+MEMORY RESULTS:
+--------------
+
+
+FINAL RESULT:
+-------------
+$finish called at time : 5100 ns : File "D:/SoC_1/riscv_dv_picorv32/tb/run_arithmetic_test.sv" Line 193
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+# exit 0
+
+==============================================
+TEST COMPLETED
+==============================================

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Dec  7 22:51:04 2025
+# Process ID         : 13216
+# Current directory  : D:/SoC_1/riscv_dv_picorv32/sim
+# Command line       : vivado.exe -mode batch -source run_arithmetic_verbose.tcl
+# Log file           : D:/SoC_1/riscv_dv_picorv32/sim/vivado.log
+# Journal file       : D:/SoC_1/riscv_dv_picorv32/sim\vivado.jou
+# Running On         : LAPTOP-EL8HLND8
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+# CPU Frequency      : 1190 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16946 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 20570 MB
+# Available Virtual  : 5683 MB
+#-----------------------------------------------------------
+source run_arithmetic_verbose.tcl
+source run_arithmetic_test.tcl

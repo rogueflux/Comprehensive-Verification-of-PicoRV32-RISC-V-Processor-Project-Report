@@ -23,9 +23,10 @@ Complete verification of PicoRV32 RISC-V processor arithmetic and logical instru
 - `simulation_logs/` - Complete simulation output
 - `test_bench/` - Testbench source files
 - `scripts/` - Automation scripts
+- `report.html` - Links to all the Materials
 
 ## How to View Results
-1. Open `index.html` in any web browser
+1. Open `report.html` in any web browser
 2. View the comprehensive test report
 3. Check detailed results for each test category
 
@@ -34,4 +35,3 @@ Complete verification of PicoRV32 RISC-V processor arithmetic and logical instru
 - Instructions Executed: 616
 - Errors Detected: 0
 - Simulation Time: 25.1 µs
-

@@ -1,0 +1,31 @@
+# QuestaSim configuration
+questa:
+  # Compile options
+  compile:
+    vlog_options: 
+      - "+incdir+../picorv32"
+      - "+define+SIMULATION"
+      - "-sv"
+      - "-work work"
+    
+  # Simulation options  
+  run:
+    vsim_options:
+      - "-c"
+      - "-do ../sim/sim_questa.tcl"
+      - "work.top"
+    
+  # Coverage options
+  coverage:
+    enable: true
+    options:
+      - "+cover"
+    
+  # Waveform options
+  wave:
+    enable: true
+    database: "wave.wdb"
+    
+  # Results
+  results_dir: "../build"
+  log_file: "simulation.log"

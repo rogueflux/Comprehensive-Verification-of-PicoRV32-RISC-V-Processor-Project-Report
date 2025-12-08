@@ -1,0 +1,78 @@
+# Copyright Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Test list for PicoRV32 (RV32IM)
+
+- test: riscv_arithmetic_basic_test
+  description: >
+    Arithmetic instruction test for PicoRV32
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=500
+    +num_of_sub_program=2
+    +no_load_store=1
+    +no_branch_jump=1
+  rtl_test: core_base_test
+  no_iss: true
+
+- test: riscv_alu_basic_test
+  description: >
+    ALU operations test for PicoRV32
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=500
+    +num_of_sub_program=2
+    +no_load_store=1
+    +no_branch_jump=1
+    +instr_category=arithmetic+logical
+  rtl_test: core_base_test
+  no_iss: true
+
+- test: riscv_load_store_test
+  description: >
+    Load/store operations test for PicoRV32
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=400
+    +num_of_sub_program=2
+    +instr_category=load_store
+  rtl_test: core_base_test
+  no_iss: true
+
+- test: riscv_branch_test
+  description: >
+    Branch instructions test for PicoRV32
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=300
+    +num_of_sub_program=3
+    +instr_category=branch
+  rtl_test: core_base_test
+  no_iss: true
+
+- test: riscv_rand_instr_test
+  description: >
+    Random instruction stress test for PicoRV32
+  iterations: 3
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=1000
+    +num_of_sub_program=5
+  rtl_test: core_base_test
+  no_iss: true
+

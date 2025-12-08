@@ -1,0 +1,55 @@
+# Copyright Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Import base testlist
+- import: <riscv_dv_root>/yaml/base_testlist.yaml
+
+# PicoRV32 specific tests (no compressed instructions)
+- test: riscv_picorv32_arithmetic_test
+  description: >
+    Arithmetic instruction test for PicoRV32 (no compressed)
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=500
+    +num_of_sub_program=2
+    +disable_compressed_instr=1
+  rtl_test: core_base_test
+  no_iss: true
+
+- test: riscv_picorv32_load_store_test
+  description: >
+    Load/store test for PicoRV32 (no compressed)
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=400
+    +num_of_sub_program=2
+    +instr_category=load_store
+    +disable_compressed_instr=1
+  rtl_test: core_base_test
+  no_iss: true
+
+- test: riscv_picorv32_rand_instr_test
+  description: >
+    Random instruction test for PicoRV32 (no compressed)
+  iterations: 3
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=1000
+    +num_of_sub_program=5
+    +disable_compressed_instr=1
+  rtl_test: core_base_test
+  no_iss: true
+

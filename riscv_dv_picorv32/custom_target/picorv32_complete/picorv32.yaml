@@ -1,0 +1,40 @@
+# PicoRV32 target configuration
+
+# ISA specification
+isa_specs:
+  RV32I: true
+  RV32M: true
+  RV32C: false
+  RV32F: false
+  RV32D: false
+  RV32A: false
+  RV32B: false
+
+# Test constraints
+constraints:
+  disable_compressed_instr: true
+  max_branch_step: 20
+  num_of_sub_program: 5
+  no_fence: true
+  no_wfi: true
+
+# Memory configuration
+mem_region:
+  - name: "ram"
+    base_addr: 0x80000000
+    size_in_bytes: 65536
+    access_type: "rwx"
+
+# CSR support (limited in PicoRV32)
+csr:
+  implemented:
+    - mstatus
+    - mie
+    - mtvec
+    - mscratch
+    - mepc
+    - mcause
+    - mtval
+    - mcycle
+    - minstret
+

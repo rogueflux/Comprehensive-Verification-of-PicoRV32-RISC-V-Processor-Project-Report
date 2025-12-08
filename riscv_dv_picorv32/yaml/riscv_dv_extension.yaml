@@ -1,0 +1,58 @@
+# PicoRV32 specific extensions for RISCV-DV
+extends: riscv_dv_extension
+picoRV32:
+  # PicoRV32 specific features
+  features:
+    # Supported ISA extensions
+    RV32I: true
+    RV32M: true
+    RV32C: false  # No compressed instructions
+    RV32F: false
+    RV32D: false
+    
+  # Memory configuration
+  mem_region:
+    - name: rom
+      base_addr: 0x80000000
+      size_in_bytes: 65536  # 64KB
+    
+  # CSR configuration (limited in PicoRV32)
+  supported_csr:
+    - mstatus
+    - mie
+    - mtvec
+    - mscratch
+    - mepc
+    - mcause
+    - mtval
+    - mcycle
+    - minstret
+    
+  # Instruction limitations
+  illegal_instr:
+    - c.addi4spn
+    - c.lw
+    - c.sw
+    - c.addi
+    - c.jal
+    - c.li
+    - c.addi16sp
+    - c.jr
+    - c.mv
+    - c.ebreak
+    - c.add
+    - c.j
+    - c.beqz
+    - c.bnez
+    - c.slli
+    - c.lwsp
+    - c.jr
+    - c.mv
+    - c.ebreak
+    - c.add
+    - c.j
+    - c.beqz
+    - c.bnez
+    - c.slli
+    - c.lwsp
+    - c.swsp

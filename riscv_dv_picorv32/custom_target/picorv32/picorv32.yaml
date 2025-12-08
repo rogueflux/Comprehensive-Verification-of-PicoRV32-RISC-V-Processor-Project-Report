@@ -1,0 +1,74 @@
+# PicoRV32 target configuration for RISCV-DV
+
+# ISA configuration
+isa:
+  # Base ISA
+  RV32I: true
+  
+  # Extensions
+  M: true      # Multiply/Divide
+  C: false     # Compressed (PicoRV32 doesn't support)
+  F: false
+  D: false
+  A: false
+  B: false
+  
+  # Privilege modes
+  supervisor: false
+  user: false
+
+# Test constraints
+constraints:
+  # General constraints
+  max_branch_step: 20
+  num_of_sub_program: 5
+  no_ebreak: false
+  no_ecall: false
+  no_wfi: true
+  no_dret: true
+  no_fence: true
+  no_csr: false
+  
+  # Memory constraints
+  max_load_store_offset: 2048
+  max_single_range_load_store: 8
+  
+  # Instruction constraints
+  illegal_instr_ratio: 0
+  hint_instr_ratio: 0
+  
+  # PicoRV32 specific
+  no_compressed_instr: true  # No C extension
+
+# Instruction distribution
+instruction_distribution:
+  arith: 25
+  logical: 20
+  compare: 10
+  load_store: 25
+  branch_jump: 15
+  csr: 5
+  mul_div: 5
+  system: 0
+
+# CSR configuration
+# PicoRV32 has limited CSR support
+supported_csr:
+  - mstatus
+  - mie
+  - mtvec
+  - mscratch
+  - mepc
+  - mcause
+  - mtval
+  - mcycle
+  - minstret
+
+# Memory configuration
+mem_region:
+  # PicoRV32 typically starts at 0x80000000
+  - name: "ram"
+    base_addr: 0x80000000
+    size_in_bytes: 65536  # 64KB
+    access_type: "rwx"
+

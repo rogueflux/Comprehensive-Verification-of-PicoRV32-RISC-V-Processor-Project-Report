@@ -1,0 +1,31 @@
+# PicoRV32 processor configuration
+processor:
+  name: "picoRV32"
+  version: "1.0"
+  
+  # Core features
+  core:
+    data_width: 32
+    addr_width: 32
+    regfile_size: 32
+    mul_div: true
+    compressed: false
+    counter_width: 64
+    
+  # Memory interface
+  mem_interface: "wishbone"
+  mem_latency: 1
+  
+  # Interrupts
+  interrupts:
+    enable: false
+    num_irqs: 0
+    
+  # Debug interface
+  debug:
+    enable: false
+    
+  # Performance counters
+  perf_counters:
+    enable: true
+    num_counters: 2

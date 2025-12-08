@@ -1,0 +1,59 @@
+
+build/final_20251207_085807/riscv_load_store_test_0.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+80000000 <_start>:
+80000000:	800020b7          	lui	ra,0x80002
+80000004:	12345137          	lui	sp,0x12345
+80000008:	67810113          	addi	sp,sp,1656 # 12345678 <_start-0x6dcba988>
+8000000c:	876541b7          	lui	gp,0x87654
+80000010:	32118193          	addi	gp,gp,801 # 87654321 <_stack_start+0x7634321>
+80000014:	deadc237          	lui	tp,0xdeadc
+80000018:	eef20213          	addi	tp,tp,-273 # deadbeef <_stack_start+0x5eabbeef>
+8000001c:	cafec2b7          	lui	t0,0xcafec
+80000020:	abe28293          	addi	t0,t0,-1346 # cafebabe <_stack_start+0x4afcbabe>
+80000024:	0020a023          	sw	sp,0(ra) # 80002000 <test_fail+0x1f4c>
+80000028:	0030a223          	sw	gp,4(ra)
+8000002c:	0040a423          	sw	tp,8(ra)
+80000030:	0050a623          	sw	t0,12(ra)
+80000034:	0000a303          	lw	t1,0(ra)
+80000038:	0040a383          	lw	t2,4(ra)
+8000003c:	0080a403          	lw	s0,8(ra)
+80000040:	00c0a483          	lw	s1,12(ra)
+80000044:	06611863          	bne	sp,t1,800000b4 <test_fail>
+80000048:	06719663          	bne	gp,t2,800000b4 <test_fail>
+8000004c:	06821463          	bne	tp,s0,800000b4 <test_fail>
+80000050:	06929263          	bne	t0,s1,800000b4 <test_fail>
+80000054:	0a500513          	li	a0,165
+80000058:	00a08823          	sb	a0,16(ra)
+8000005c:	01008583          	lb	a1,16(ra)
+80000060:	04b51a63          	bne	a0,a1,800000b4 <test_fail>
+80000064:	0000b637          	lui	a2,0xb
+80000068:	bcd60613          	addi	a2,a2,-1075 # abcd <_start-0x7fff5433>
+8000006c:	00c09923          	sh	a2,18(ra)
+80000070:	01209683          	lh	a3,18(ra)
+80000074:	04d61063          	bne	a2,a3,800000b4 <test_fail>
+80000078:	08000713          	li	a4,128
+8000007c:	00e08a23          	sb	a4,20(ra)
+80000080:	0140c783          	lbu	a5,20(ra)
+80000084:	08000813          	li	a6,128
+80000088:	03079663          	bne	a5,a6,800000b4 <test_fail>
+8000008c:	000088b7          	lui	a7,0x8
+80000090:	01109b23          	sh	a7,22(ra)
+80000094:	0160d903          	lhu	s2,22(ra)
+80000098:	000089b7          	lui	s3,0x8
+8000009c:	01391c63          	bne	s2,s3,800000b4 <test_fail>
+800000a0:	00100a13          	li	s4,1
+800000a4:	80002ab7          	lui	s5,0x80002
+800000a8:	080a8a93          	addi	s5,s5,128 # 80002080 <test_fail+0x1fcc>
+800000ac:	014aa023          	sw	s4,0(s5)
+800000b0:	00100073          	ebreak
+
+800000b4 <test_fail>:
+800000b4:	00000a13          	li	s4,0
+800000b8:	80002ab7          	lui	s5,0x80002
+800000bc:	080a8a93          	addi	s5,s5,128 # 80002080 <test_fail+0x1fcc>
+800000c0:	014aa023          	sw	s4,0(s5)
+800000c4:	00100073          	ebreak

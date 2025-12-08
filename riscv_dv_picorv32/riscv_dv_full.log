@@ -1,0 +1,25 @@
+D:/SoC_1/riscv-dv/run.py:156: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<path_var\>",
+D:/SoC_1/riscv-dv/run.py:161: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<xlen\>", m.group('xlen'), cmd)
+D:/SoC_1/riscv-dv/run.py:165: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<cfg_path\>", setting_dir, cmd)
+D:/SoC_1/riscv-dv/run.py:170: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<variant\>", variant, cmd)
+D:/SoC_1/riscv-dv/run.py:172: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<variant\>", isa, cmd)
+D:/SoC_1/riscv-dv/run.py:173: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<priv\>", priv, cmd)
+D:/SoC_1/riscv-dv/run.py:174: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<scripts_path\>", scripts_dir, cmd)
+D:/SoC_1/riscv-dv/run.py:175: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<config_path\>", yaml_dir, cmd)
+D:/SoC_1/riscv-dv/run.py:192: SyntaxWarning: invalid escape sequence '\<'
+  cmd = re.sub("\<elf\>", elf, base_cmd)
+D:/SoC_1/riscv-dv/run.py:336: SyntaxWarning: invalid escape sequence '\+'
+  test['gen_opts'] = re.sub("\+", "--",
+Sat, 06 Dec 2025 19:41:20 lib.py:261   INFO     Creating output directory: ../riscv_dv_picorv32/tests/debug_full
+Sat, 06 Dec 2025 19:41:20 lib.py:198   DEBUG    mkdir -p ../riscv_dv_picorv32/tests/debug_full/asm_test
+Sat, 06 Dec 2025 19:41:20 lib.py:226   INFO     Processing regression test list : D:/SoC_1/riscv-dv/target/rv32imc/testlist.yaml, test: riscv_arithmetic_basic_test
+Sat, 06 Dec 2025 19:41:20 lib.py:226   INFO     Processing regression test list : D:/SoC_1/riscv-dv/yaml/base_testlist.yaml, test: riscv_arithmetic_basic_test
+Sat, 06 Dec 2025 19:41:20 lib.py:240   INFO     Found matched tests: riscv_arithmetic_basic_test, iterations:1
